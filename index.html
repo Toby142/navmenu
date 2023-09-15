@@ -7,5 +7,22 @@
 </head>
 <body>
     <h1>github branching opdracht</h1>
+
+    <ul id="menu">
+    </ul>
+
+    <script>
+        const list = [{"title": "home","url" : "/"},{"title" : "producten","url" : "/producten/"},{"title": "Overons","url" : "/overons/"},{"title": "contact","url" : "/contact/"}];
+        const menu = document.getElementById('menu');
+
+        list.forEach(item => {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = item.url;
+            link.textContent = item.title;
+            listItem.appendChild(link);
+            menu.appendChild(listItem);
+        });
+    </script>
 </body>
 </html>
